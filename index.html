@@ -26,7 +26,7 @@
     padding: 20px;
     position: fixed;
     height: 100%;
-overflow: hidden;
+    overflow: hidden;
   }
 
 .welcome {
@@ -44,7 +44,7 @@ overflow: hidden;
   font-size: 2.5rem;
   color: #00bfff;
   opacity: 0;
-  animation: fadeInUp 0.8s ease forwards, bounce 1s ease infinite alternate;
+  animation: fadeInUp 1.2s ease forwards, bounce 2s ease infinite alternate;
 }
 .welcome span:hover{
     color: #fbfefff8;
@@ -151,13 +151,6 @@ overflow: hidden;
     transform: translateY(-10px);
   }
 
-  /* Responsive */
-  @media(max-width: 768px) {
-    nav { width: 60px; }
-    main { margin-left: 60px; padding: 20px; }
-    .services { flex-direction: column; align-items: center; }
-  }
-
   /* Contact links style */
   #contact a {
     color: #00bfff;
@@ -172,26 +165,43 @@ overflow: hidden;
     text-align: center;
     color:  #00bfff;
     border-radius: 10px;
-    padding: 2px;
-    text-decoration-color: rgba(219, 207, 206, 0.935);
-    box-shadow: #00bfff 10px 1px 30px;
-    width: 40%;
+    padding: 10px;
+    box-shadow: #00bfff 0px 0px 20px;
+    width: 60%;
     margin: auto;
-    border: none;
     background-color: #000000;
     font-size: 2rem;
-    
   }
 
  #p{
     text-align: center;
-    width: 35%;
+    width: 50%;
     border-radius: 30px;
     margin: auto ;
-    box-shadow: #ff0000be 3px 13px 19px;
+    box-shadow: #ff0000be 0px 5px 15px;
     background-color: red;
-    padding: 5px;
-    
+    padding: 10px;
+    font-size: 1.5rem;
+ }
+ 
+ /* 📱 Responsive */
+ @media(max-width: 768px) {
+    nav { 
+      width: 100%; 
+      height: auto;
+      position: relative;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    main { 
+      margin-left: 0; 
+      padding: 20px;
+    }
+    .welcome { font-size: 2rem; }
+    .welcome span { font-size: 1.5rem; }
+    .services { flex-direction: column; align-items: center; }
+    .lol, #p { width: 90%; font-size: 1.2rem; }
+    .hero { height: 200px; }
  }
 </style>
 </head>
@@ -222,16 +232,13 @@ overflow: hidden;
   <span>g</span>
   <span>y</span>
   <span>m</span>&nbsp;
-    <span></span>
-  <span> 🏋</span>
+  <span>🏋</span>
 </h1>
 <h2 class="lol" > 💪🏾 مرحباً بك في عالم القوة </h2>
 
-
   <div class="hero">
     <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80" 
-         alt="Gym Iron Equipment" 
-         style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+         alt="Gym Iron Equipment">
   </div>
 </section>
   <!-- Services Section -->
@@ -255,9 +262,9 @@ overflow: hidden;
     <h1 style="text-decoration: underline; margin-top: 4px;"  >Contact Us</h1>
     <h2 id="p">📩 راسلنا هنا</h2><br>
     <p style="text-align:center; margin-top: 12px; font-size: 1rem; ">
-      Email: <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=infogym031@gym.com" target="_blank">innfogym031@gmail.com</a>
+      Email: <a href="mailto:infogym031@gym.com">infogym031@gym.com</a>
       <br><br>
-      Phone: <a  href="tel:‪+212670578818‬">‪+212 670 578 418‬</a>
+      Phone: <a href="tel:+212670578818">+212 670 578 418</a>
     </p>
   </section>
 </main>
