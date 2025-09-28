@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gym Website</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    background: #111;
+    color: #fff;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Sidebar */
+  nav {
+    width: 200px;
+    background: rgb(24, 24, 24);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+overflow: hidden;
+  }
+
+.welcome {
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  cursor: pointer;
+  font-size: 3rem;
+  word-spacing: 20px;
+}
+
+.welcome span {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #00bfff;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards, bounce 1s ease infinite alternate;
+}
+.welcome span:hover{
+    color: #fbfefff8;
+    box-shadow: #00bfff 2px 3px 6px;
+    padding: 3px;
+}
+/* كل حرف يتأخر شوية باش يبان متتالي */
+.welcome span:nth-child(1) { animation-delay: 0.2s, 2s; }
+.welcome span:nth-child(2) { animation-delay: 0.4s, 2.2s; }
+.welcome span:nth-child(3) { animation-delay: 0.6s, 2.4s; }
+.welcome span:nth-child(4) { animation-delay: 0.8s, 2.6s; }
+.welcome span:nth-child(5) { animation-delay: 1s, 2.8s; }
+.welcome span:nth-child(6) { animation-delay: 1.2s, 3s; }
+.welcome span:nth-child(7) { animation-delay: 1.4s, 3.2s; }
+.welcome span:nth-child(8) { animation-delay: 1.6s, 3.4s; }
+.welcome span:nth-child(9) { animation-delay: 1.8s, 3.6s; }
+.welcome span:nth-child(10){ animation-delay: 2s, 3.8s; }
+.welcome span:nth-child(11){ animation-delay: 2.2s, 4s; }
+.welcome span:nth-child(12){ animation-delay: 2.4s, 4.2s; }
+.welcome span:nth-child(13){ animation-delay: 2.6s, 4.4s; }
+.welcome span:nth-child(14){ animation-delay: 2.8s, 4.6s; }
+.welcome span:nth-child(15){ animation-delay: 3s, 4.8s; }
+
+/* حركة الدخول */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* حركة الاهتزاز */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: 0.3s;
+    overflow: hidden;
+  }
+
+  nav a:hover {
+    background: #00bfff;
+    color: #000;
+  }
+
+  /* Main content */
+  main {
+    margin-left: 220px;
+    padding: 40px;
+    flex: 1;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #00bfff;
+  }
+
+  /* Hero Section with image */
+  .hero {
+    position: relative;
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto 50px;
+  }
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* Services cards */
+  .services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    background: #1a1a1a;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+  }
+
+  .card:hover {
+    background: #ff4500;
+    transform: translateY(-10px);
+  }
+
+  /* Responsive */
+  @media(max-width: 768px) {
+    nav { width: 60px; }
+    main { margin-left: 60px; padding: 20px; }
+    .services { flex-direction: column; align-items: center; }
+  }
+
+  /* Contact links style */
+  #contact a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  #contact a:hover {
+    text-decoration: underline;
+  }
+  .lol{
+    text-align: center;
+    color:  #00bfff;
+    border-radius: 10px;
+    padding: 2px;
+    text-decoration-color: rgba(219, 207, 206, 0.935);
+    box-shadow: #00bfff 10px 1px 30px;
+    width: 40%;
+    margin: auto;
+    border: none;
+    background-color: #000000;
+    font-size: 2rem;
+    
+  }
+
+ #p{
+    text-align: center;
+    width: 35%;
+    border-radius: 30px;
+    margin: auto ;
+    box-shadow: #ff0000be 3px 13px 19px;
+    background-color: red;
+    padding: 5px;
+    
+ }
+</style>
+</head>
+<body>
+
+<nav>
+    <h2>Gym 💪</h2>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <!-- Hero Section with gym image -->
+<section id="home">
+<h1 class="welcome">
+  <span>w</span>
+  <span>e</span>
+  <span>l</span>
+  <span>c</span>
+  <span>o</span>
+  <span>m</span>
+  <span>e</span>&nbsp;
+  <span>t</span>
+  <span>o</span>&nbsp;
+  <span>m</span>
+  <span>y</span>&nbsp;
+  <span>g</span>
+  <span>y</span>
+  <span>m</span>&nbsp;
+    <span></span>
+  <span> 🏋</span>
+</h1>
+<h2 class="lol" > 💪🏾 مرحباً بك في عالم القوة </h2>
+
+
+  <div class="hero">
+    <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=1400&q=80" 
+         alt="Gym Iron Equipment" 
+         style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+  </div>
+</section>
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="card">
+      <h3>Cardio Training</h3>
+      <p>Boost your stamina and burn calories.</p>
+    </div>
+    <div class="card">
+      <h3>Weight Training</h3>
+      <p>Build strength and muscle effectively.</p>
+    </div>
+    <div class="card">
+      <h3>Yoga & Stretching</h3>
+      <p>Relax and improve flexibility.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h1 style="text-decoration: underline; margin-top: 4px;"  >Contact Us</h1>
+    <h2 id="p">📩 راسلنا هنا</h2><br>
+    <p style="text-align:center; margin-top: 12px; font-size: 1rem; ">
+      Email: <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=infogym031@gym.com" target="_blank">innfogym031@gmail.com</a>
+      <br><br>
+      Phone: <a  href="tel:‪+212670578818‬">‪+212 670 578 418‬</a>
+    </p>
+  </section>
+</main>
+
+</body>
+</html>
